@@ -1,112 +1,81 @@
 ﻿using System;
-public static class Pro2
+static class Prog1
 {
-    public static void branching(int a, int b)
+    public static void add(int a, int b)
     {
-        if (a + b > 10)
-            Console.WriteLine("The answer is greater than 10.");
+        int c = a + b;
+        Console.WriteLine(c);
     }
-    public static void ifElse()
+    public static void sub(int a, int b)
+
     {
-        int a = 5;
-        int b = 3;
-        if (a + b > 10)
-            Console.WriteLine("The answer is greater than 10");
-        else
-            Console.WriteLine("The answer is not greater than 10");
+        int d = a - b;
+        Console.WriteLine(d);
     }
-    public static void ifElse2()
+    public static void mul(int a, int b)
     {
-        int a = 5;
-        int b = 3;
-        if (a + b > 10)
-        {
-            Console.WriteLine("The answer is greater than 10");
-        }
-        else
-        {
-            Console.WriteLine("The answer is not greater than 10");
-        }
+        int e = a * b;
+        Console.WriteLine(e);
     }
-    public static void compare()
+    public static void div(int a, int b)
     {
-        int a = 5;
-        int b = 3;
-        int c = 4;
-        if ((a + b + c > 10) && (a == b))
-        {
-            Console.WriteLine("The answer is greater than 10");
-            Console.WriteLine("And the first number is equal to the second");
-        }
-        else
-        {
-            Console.WriteLine("The answer is not greater than 10");
-            Console.WriteLine("Or the first number is not equal to the second");
-        }
+        int f = a / b;
+        Console.WriteLine(f);
     }
-    public static void compare2()
+    public static void complex(int a, int b, int c)
     {
-        int a = 5;
-        int b = 3;
-        int c = 4;
-        if ((a + b + c > 10) || (a == b))
-        {
-            Console.WriteLine("The answer is greater than 10");
-            Console.WriteLine("Or the first number is equal to the second");
-        }
-        else
-        {
-            Console.WriteLine("The answer is not greater than 10");
-            Console.WriteLine("And the first number is not equal to the second");
-        }
+        int g = a + b * c;
+        Console.WriteLine(g);
     }
-    public static void whileLoop()
+    public static void complex2(int a, int b, int c, int d)
     {
-        int counter = 0;
-        while (counter < 10)
-        {
-            Console.WriteLine($"Hello World! The counter is {counter}");
-            counter++;
-        }
+        int e = (a + b) / c;
+        int f = (a + b) % c;
+        Console.WriteLine($"quotient : {e}");
+        Console.WriteLine($"remainder : {f}");
     }
-    public static void doWhileLoop()
+    public static void findMinMax()
     {
-        int counter = 0;
-        do
-        {
-            Console.WriteLine($"Hello World! The counter is {counter}");
-            counter++;
-        } while (counter < 10);
+        int max = int.MaxValue;
+        int min = int.MinValue;
+        Console.WriteLine($"The range of integers is {min} to {max}");
     }
-    public static void forLoop()
+    public static void doubleArithametics(double x, double y, double z)
     {
-        for (int counter = 0; counter < 10; counter++)
-        {
-            Console.WriteLine($"Hello World! The counter is {counter}");
-        }
+        double d = (x + y) / z;
+        Console.WriteLine($"double expresion (a+b)/c= {d}");
     }
-    public static void nestedLoop()
+    public static void minMax()
     {
-        for (int row = 1; row < 11; row++)
-        {
-            for (char column = 'a'; column < 'k'; column++)
-            {
-                Console.WriteLine($"The cell is ({row}, {column})");
-            }
-        }
+        double max = double.MaxValue;
+        double min = double.MinValue;
+        Console.WriteLine($"The range of double is {min} to {max}");
     }
-    public static void isDivsibleBy3()
+    public static void roundingError()
     {
-        int sum = 0;
-        for (int number = 1; number < 21; number++)
-        {
-            if (number % 3 == 0)
-            {
-                sum = sum + number;
-            }
-        }
-        Console.WriteLine($"The sum is {sum}");
+        double third = 1.0 / 3.0;
+        Console.WriteLine($"rounding error in double {third}");
+    }
+    public static void decimalMinMax()
+    {
+        decimal min = decimal.MinValue;
+        decimal max = decimal.MaxValue;
+        Console.WriteLine($"The range of the decimal type is {min} to {max}");
+    }
+    public static void decimalVsDouble()
+    {
+        double a = 1.0;
+        double b = 3.0;
+        Console.WriteLine($"Double{a / b}");
+        decimal c = 1.0M;
+        decimal d = 3.0M;
+        Console.WriteLine($"Decimal{c / d}");
+    }
+    public static void areaOfCircle()
+    {
+        double radius = 2.50;
+        double area = Math.PI * radius * radius;
+        Console.WriteLine(area);
     }
 }
-
 
